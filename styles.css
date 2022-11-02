@@ -1,0 +1,373 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  box-shadow: 0px 10px 8px 3px rgba(0, 0, 0, 0.142);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+header div {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header div img {
+  width: 100px;
+}
+header div nav button:first-child {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: blue;
+  background-color: white;
+}
+header div nav button:last-child {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+}
+
+main {
+  position: relative;
+  top: 100px;
+}
+main section:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 25px 50px;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(234, 230, 255) 50%, rgb(255, 255, 255) 100%);
+}
+main section:first-child div {
+  width: 55%;
+}
+main section:first-child div h1 {
+  font-size: 40px;
+}
+main section:first-child div p {
+  line-height: 1.2;
+  font-size: 18px;
+  color: black;
+  padding: 15px 0 25px 0;
+}
+main section:first-child div input {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: 0.5px solid rgb(156, 153, 153);
+  color: grey;
+  background-color: white;
+  width: 40%;
+  margin: 10px 10px 0 0;
+}
+main section:first-child div input:focus {
+  border: 0.5px solid rgb(164, 164, 240);
+  box-shadow: 0 0 4px rgba(76, 76, 244, 0.451);
+  outline: none;
+}
+main section:first-child div button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  background-color: blue;
+}
+main section:first-child img {
+  width: 40%;
+}
+main section:nth-child(2) {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  padding: 30px 0;
+}
+main section:nth-child(2) img {
+  width: 100%;
+}
+main section:nth-child(2) div:first-of-type h2 {
+  font-size: 30px;
+}
+main section:nth-child(2) div:first-of-type p {
+  line-height: 1.2;
+  font-size: 18px;
+  color: black;
+  padding: 15px 0 25px 0;
+}
+main section:nth-child(2) div:first-of-type button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: 0.5px solid blue;
+  color: blue;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+main section:nth-child(2) div:nth-of-type(2) p {
+  font-size: 18px;
+}
+main section:nth-child(2) div:nth-of-type(2) img {
+  width: 100px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+main section:nth-child(3) {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  padding: 30px 0;
+}
+main section:nth-child(3) P {
+  line-height: 1.2;
+  font-size: 18px;
+  color: black;
+  padding: 15px 0 25px 0;
+}
+main section:nth-child(4), main section:nth-child(5), main section:nth-child(6), main section:nth-child(7) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: auto;
+  width: 85%;
+  padding: 30px 0;
+}
+main section:nth-child(4) img, main section:nth-child(5) img, main section:nth-child(6) img, main section:nth-child(7) img {
+  width: 40%;
+}
+main section:nth-child(4) div, main section:nth-child(5) div, main section:nth-child(6) div, main section:nth-child(7) div {
+  width: 55%;
+}
+main section:nth-child(4) div h4, main section:nth-child(5) div h4, main section:nth-child(6) div h4, main section:nth-child(7) div h4 {
+  font-size: 15px;
+}
+main section:nth-child(4) div h2, main section:nth-child(5) div h2, main section:nth-child(6) div h2, main section:nth-child(7) div h2 {
+  font-size: 30px;
+}
+main section:nth-child(4) div p, main section:nth-child(5) div p, main section:nth-child(6) div p, main section:nth-child(7) div p {
+  line-height: 1.2;
+  font-size: 18px;
+  color: grey;
+  padding: 15px 0 25px 0;
+}
+main section:nth-child(4) div a, main section:nth-child(5) div a, main section:nth-child(6) div a, main section:nth-child(7) div a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+}
+main section:nth-child(4) div a:hover, main section:nth-child(5) div a:hover, main section:nth-child(6) div a:hover, main section:nth-child(7) div a:hover {
+  text-decoration: underline;
+}
+main section:nth-child(4) div i, main section:nth-child(5) div i, main section:nth-child(6) div i, main section:nth-child(7) div i {
+  font-size: 14px;
+  margin-right: 4px;
+  font-weight: bold;
+}
+main section:nth-child(8) {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 0.5px solid grey;
+  border-bottom: 0.5px solid grey;
+}
+main section:nth-child(8) > div {
+  width: 47%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main section:nth-child(8) > div img {
+  width: 25%;
+}
+main section:nth-child(8) > div div {
+  width: 70%;
+}
+main section:nth-child(8) > div div h4 {
+  font-size: 18px;
+}
+main section:nth-child(8) > div div p {
+  line-height: 1.2;
+  font-size: 18px;
+  color: grey;
+  padding: 15px 0 25px 0;
+}
+main section:nth-child(8) > div div button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: 0.5px solid blue;
+  color: blue;
+  background-color: transparent;
+  transition: 0.5s;
+  cursor: pointer;
+}
+main section:nth-child(8) > div div button:hover {
+  color: white;
+  background-color: blue;
+}
+main section:nth-child(9) {
+  background-color: rgb(219, 241, 249);
+}
+main section:nth-child(9) .ebay_container {
+  margin: auto;
+  width: 85%;
+  padding: 30px;
+  border-bottom: 3px solid rgb(26, 26, 77);
+}
+main section:nth-child(9) .ebay_container .ebay_box1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main section:nth-child(9) .ebay_container .ebay_box1 img {
+  width: 35%;
+}
+main section:nth-child(9) .ebay_container .ebay_box1 div {
+  width: 60%;
+}
+main section:nth-child(9) .ebay_container .ebay_box1 div p {
+  font-size: 30px;
+}
+main section:nth-child(9) .ebay_container .ebay_box2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+main section:nth-child(9) .ebay_container .ebay_box2 div > p:first-child {
+  font-weight: bold;
+}
+main section:nth-child(9) .icon {
+  color: rgb(26, 26, 77);
+  font-size: 20px;
+  margin-left: 7.5%;
+  padding-bottom: 20px;
+}
+main section:nth-child(10) {
+  margin: auto;
+  width: 85%;
+  background-image: url(image/Capture\ d’écran\ 2022-11-01\ 215945.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-size: 18px;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+main section:nth-child(10) h4 {
+  padding-bottom: 20px;
+}
+main section:nth-child(10) input {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: 0.5px solid grey;
+  color: grey;
+  background-color: white;
+  margin-right: 20px;
+}
+main section:nth-child(10) button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  background-color: rgb(95, 225, 243);
+}
+main section:nth-child(11) {
+  margin: auto;
+  width: 85%;
+  text-align: center;
+  padding: 30px;
+}
+main section:nth-child(11) p {
+  line-height: 1.2;
+  font-size: 18px;
+  color: black;
+  padding: 15px 0 25px 0;
+}
+main section:nth-child(11) button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  background-color: black;
+  margin-left: 8px;
+}
+main section:nth-child(11) button i {
+  margin-right: 4px;
+  font-size: 20px;
+}
+main section:nth-child(11) button span {
+  font-size: small;
+}
+
+footer {
+  margin: auto;
+  width: 85%;
+  margin-top: 150px;
+  text-align: center;
+}
+footer select {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: 0.5px solid rgb(233, 228, 228);
+  color: grey;
+  background-color: white;
+}
+footer div {
+  margin: 20px 0;
+}
+footer a {
+  color: grey;
+  font-size: 15px;
+  padding: 0px 10px;
+  margin-top: 20px;
+}
+footer a:hover {
+  color: black;
+}
+footer img {
+  width: 200px;
+}
+footer p {
+  font-size: 15px;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

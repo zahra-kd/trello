@@ -1,0 +1,306 @@
+@mixin flex($flex_direction, $justify_content, $align_items) {
+    display: flex;
+    flex-direction: $flex_direction;
+    justify-content: $justify_content;
+    align-items: $align_items;
+}
+@mixin nav_button ($font_color, $button_background) {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: $font_color;
+    background-color: $button_background;
+}
+@mixin paragraph ($p_color) {
+    line-height: 1.2;
+    font-size: 18px;
+    color: $p_color;
+    padding: 15px 0 25px 0;
+}
+@mixin btn_input ($btn_input_border, $btn_color, $btn_background) {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: $btn_input_border;
+    color: $btn_color;
+    background-color: $btn_background;
+}
+@mixin center ($width) {
+    margin: auto;
+    width: $width;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    box-shadow: 0px 10px 8px 3px rgba(0, 0, 0, 0.142);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    div {
+        padding: 20px;
+        @include flex(row, space-between, center);
+        img {
+            width: 100px;
+        }
+        nav button:first-child {
+            @include nav_button(blue, white);
+        }
+        nav button:last-child {
+            @include nav_button(white, blue);
+        }
+    }
+}
+main {
+    position: relative;
+    top: 100px;
+    section:first-child {
+        @include flex(row, space-between, center);
+        padding: 25px 0 25px 50px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 230, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        div {
+            width: 55%;
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                @include paragraph(black);
+            }
+            input {
+                @include btn_input( 0.5px solid rgb(156, 153, 153), grey, white);
+                width: 40%;
+                margin: 10px 10px 0 0;
+                &:focus {
+                    border: 0.5px solid rgb(164, 164, 240);
+                    box-shadow: 0 0 4px rgba(76, 76, 244, 0.451);
+                    outline: none;
+                    }
+                }
+                button {
+                    @include btn_input(none, white, blue);
+                }
+            }
+        img {
+            width: 40%;
+        }
+    }
+
+    section:nth-child(2) {
+        @include center(70%);
+        text-align: center;
+        @include flex(column, center, space-between);
+        padding: 30px 0;
+        img {
+            width: 100%;
+        }
+        div:first-of-type {
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                @include paragraph(black);
+            }
+            button {
+                @include btn_input(0.5px solid blue, blue, transparent);
+                margin-bottom: 20px;
+            }
+        }
+        div:nth-of-type(2) {
+            p {
+                font-size: 18px;
+            }
+            img {
+                width: 100px;
+                margin-left: 15px;
+                margin-top: 15px;
+            }
+        }
+    }
+    section:nth-child(3) {
+        @include center(70%);
+        text-align: center;
+        padding: 30px 0;
+        P {
+            @include paragraph(black);
+        }
+    }
+    section:nth-child(4), section:nth-child(5), section:nth-child(6), section:nth-child(7) {
+        @include flex(row, space-between, flex-start);
+        @include center(85%);
+        padding: 30px 0;
+        img {
+            width: 40%;
+        }
+        div {
+            width: 55%;
+            h4 {
+                font-size: 15px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                @include paragraph(grey)
+            }
+            a {
+                text-decoration: none;
+                font-size: 25px;
+                font-weight: 500;
+                color: black;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            i {
+                font-size: 14px;
+                margin-right: 4px;
+                font-weight: bold;
+            }
+        }
+    }
+    section:nth-child(8) {
+        @include center(85%);
+        @include flex(row, space-between, flex-start);
+        padding: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-top: 0.5px solid grey;
+        border-bottom: 0.5px solid grey;
+        >div {
+            width: 47%;
+            @include flex(row, space-between, flex-start);
+            img {
+                width: 25%;
+            }
+            div {
+                width: 70%;
+                h4 {
+                    font-size: 18px;
+                }
+                p {
+                    @include paragraph(grey);
+                }
+                button {
+                    @include btn_input(0.5px solid blue, blue, transparent);
+                    transition: .5s;
+                    cursor: pointer;
+                    &:hover {
+                        color: white;
+                        background-color: blue;
+                    }
+                }
+                
+            }
+        }
+    }
+    section:nth-child(9) {
+        background-color:rgb(219, 241, 249);
+        .ebay_container{
+            @include center(85%);
+            padding: 30px;
+            border-bottom: 3px solid rgb(26, 26, 77);
+            .ebay_box1 {
+                @include flex(row, space-between, center);
+                img {
+                    width: 35%;
+                }
+                div {
+                    width: 60%;
+                    p {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .ebay_box2 {
+                @include flex(row, space-between, flex-start);
+                margin-top: 20px;
+                div>p:first-child {
+                    font-weight: bold;
+                }
+            }
+        }
+        .icon {
+            color: rgb(26, 26, 77);
+            font-size: 20px;
+            margin-left: 7.5%;
+            padding-bottom: 20px;
+        }
+    }
+    section:nth-child(10) {
+        @include center(85%);
+        background-image: url(image/Capture\ d’écran\ 2022-11-01\ 215945.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-size: 18px;
+        padding: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: white;
+        h4 {
+            padding-bottom: 20px;
+        }
+        input {
+            @include btn_input(0.5px solid grey, grey, white);
+            margin-right: 20px;
+        }
+        button {
+            @include btn_input(none, white, rgb(95, 225, 243));
+        }
+    }
+    section:nth-child(11) {
+        @include center(85%);
+        text-align: center;
+        padding: 30px;
+        p {
+            @include paragraph(black);
+        }
+        button {
+            @include btn_input(none, white, black);
+            margin-left: 8px;
+            i {
+                margin-right: 4px;
+                font-size: 20px;
+            }
+            span {
+                font-size: small;
+            }
+        }
+    }
+}
+footer {
+    @include center(85%);
+    margin-top: 150px;
+    text-align: center;
+    select {
+        @include btn_input(0.5px solid rgb(233, 228, 228), grey, white);
+        
+    }
+
+    div {
+        margin: 20px 0;
+    }
+    a{
+        color: grey;
+        font-size: 15px;
+        padding: 0px 10px;
+        margin-top: 20px;
+        &:hover {
+            color: black;
+        }
+    }
+    img {
+        width: 200px;
+    }
+    p {
+        font-size: 15px;
+        padding: 20px;
+    }
+}
